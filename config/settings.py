@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django_extensions',
     # Our Apps
     'website.apps.WebsiteConfig',
+    'accounts.apps.AccountsConfig',
 ]
 
 MIDDLEWARE = [
