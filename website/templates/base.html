@@ -145,7 +145,19 @@
               </button>
               <!-- End Shopping Cart -->
 
-              <a class="btn btn-primary btn-transition" href="{% url 'accounts:login' %}">ورود</a>
+                  {% if user.is_authenticated %}
+                      <form action="{% url 'accounts:logout' %}" method="post" class="d-inline">
+                          {% csrf_token %}
+                          <button class="btn btn-danger btn-transition" type="submit" name="exit">
+                              خروج
+                          </button>
+                      </form>
+                    {% else %}
+                      <a class="btn btn-primary btn-transition" href="{% url 'accounts:login' %}">
+                          ورود
+                      </a>
+                    {% endif %}
+
             </li>
           </ul>
         </div>
