@@ -1,3 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.views.generic import TemplateView
 
-# Create your views here.
+
+class ShopProductGridView(TemplateView):
+    template_name = 'shop/product/grid.html'
+
+
+class ShopProductListView(TemplateView):
+    template_name = 'shop/product/list.html'
