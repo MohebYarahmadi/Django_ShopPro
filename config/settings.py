@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     # Our Apps
     'website.apps.WebsiteConfig',
     'accounts.apps.AccountsConfig',
+    'shop.apps.ShopConfig',
 ]
 
 MIDDLEWARE = [
